@@ -35,11 +35,11 @@ def downloadVideo():
     select.download(Folder_Name)
     youtubeError.config(text="Download completed!")
 
-
-
 #App Design
 app = Tk()
-app.title("Youtube Downloader")
+winIcon = PhotoImage(file = "app_icon.png")
+app.iconphoto(False, winIcon)
+app.title("YouTube Downloader")
 app.mainloop()
 app.geometry("350x400")
 app.columnconfigure(0,weight=1) #center content
