@@ -1,4 +1,4 @@
-# yt-downloader
+# YouTube Downloader v0.1 (Jens-Git/yt-downloader)
 Simple Python Script for Downloading YouTube Videos.<br />
 Nothing more, nothing less.
 
