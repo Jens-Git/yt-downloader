@@ -25,13 +25,16 @@ def downloadVideo():
 
         if(choice == choices[0]):
             select = yt.streams.filter(progressive=True).get_highest_resolution()
-            print ("highest resolution"+ url)
+            print ("Parsing Highest Resolution from "+ url +"...")
         elif(choice == choices[1]):
             select = yt.streams.filter(progressive=True).get_lowest_resolution()
+            print ("Parsing Lowest Resolution from "+ url + "...")
         elif(choice == choices[2]):
             select = yt.streams.filter(only_audio=True).first()
+            print ("Parsing Audio Only from "+ url + "...")
         elif(choice == choices[3]):
             select = yt.streams.filter(only_video=True).first()
+            print ("Parsing Video Only from "+ url + "...")
         else:
             youtubeError.config(text="Link not valid!",fg="red")
     
