@@ -16,6 +16,13 @@ def openLocation():
         #locationError.config(text="Please choose a folder",fg="red",font=("Raleway",10))
     
 def downloadVideo():
+    if (Folder_Name == ""):
+        messagebox.showerror("YouTube Downloader", "Please choose a save folder")
+    elif (youtubeChoices.get() == ""):
+        messagebox.showerror("YouTube Downloader", "Please choose video quality")
+    elif (youtubeEntry.get() == ""):
+        messagebox.showerror("YouTube Downloader", "Please insert a YouTube link")
+    
     choice = youtubeChoices.get()
     url = youtubeEntry.get()
 
@@ -37,6 +44,7 @@ def downloadVideo():
             print ("Parsing Video Only from "+ url + "...")
         else:
             youtubeError.config(text="Link not valid!",fg="red")
+
     
     # Download Function
     select.download(Folder_Name)
