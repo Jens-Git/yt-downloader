@@ -61,9 +61,9 @@ def downloadVideo():
     messagebox.showinfo("YouTube Downloader", "Download complete!")
 #App Design
 app = Tk()
-winIcon = PhotoImage(file=resource_path("app_icon.png"))
+#winIcon = PhotoImage(file=resource_path("app_icon.png"))
 app.config(bg="white")
-app.iconphoto(False, winIcon)
+#app.iconphoto(False, winIcon)
 app.resizable(False, False)
 app.title("YouTube Downloader v0.2")
 
