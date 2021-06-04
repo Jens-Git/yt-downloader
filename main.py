@@ -4,6 +4,14 @@ from tkinter import ttk, filedialog, messagebox #tkinter gui lib, used for GUI
 from PIL import Image, ImageTk #pillow lib, used for image display in app
 from pytube import YouTube #youtube lib, used for parsing youtube content
 
+#Make script EXE-cutable
+#Note: Images and Data must be called via resource_path(image.png)
+import sys, os 
+def resource_path(relative_path):
+    if hasattr(sys, '_MEIPASS'):
+        return os.path.join(sys._MEIPASS, relative_path)
+    return os.path.join(os.path.abspath("."), relative_path)
+
 #Funcation File Location
 Folder_Name = ""
 def openLocation():
@@ -53,7 +61,7 @@ def downloadVideo():
     messagebox.showinfo("YouTube Downloader", "Download complete!")
 #App Design
 app = Tk()
-winIcon = PhotoImage(file="app_icon.png")
+winIcon = PhotoImage(file=resource_path("app_icon.png"))
 app.config(bg="white")
 app.iconphoto(False, winIcon)
 app.resizable(False, False)
@@ -62,7 +70,7 @@ app.title("YouTube Downloader v0.2")
 canvas = Canvas(app, height=320, bg="white", borderwidth=0, highlightthickness=0)
 canvas.grid(columnspan=3, rowspan=8)
 
-app_logo = Image.open('app_icon_main.png').resize((350,100), Image.ANTIALIAS)
+app_logo = Image.open(resource_path("app_icon_main.png")).resize((350,100), Image.ANTIALIAS)
 app_logo = ImageTk.PhotoImage(app_logo)
 app_logo_label = Label(image=app_logo,bg="white", relief="flat")
 app_logo_label.image = app_logo 
