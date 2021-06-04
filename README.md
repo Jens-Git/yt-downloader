@@ -2,6 +2,11 @@
 Simple Python Script for Downloading YouTube Videos.<br />
 <b>Nothing more, nothing less.</b><br />
 <br />
+v0.2.4<br />
+Implemented changes:
+- Removed *.ico, to avoid Antivirus False Positive with executable
+- Added new version to exe/ folder
+
 v0.2.3<br />
 Implemented changes:
 - Added resource_path(image.png) function to make App EXE-cutable
